@@ -1,0 +1,7 @@
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+.header{
+background: #1F679B;
+}
