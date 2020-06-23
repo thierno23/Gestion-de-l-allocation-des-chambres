@@ -22,7 +22,7 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-6 ">
-        <select id="inputState" class="form-control text-sm ml-0">
+        <select id="type_etud" class="form-control text-sm ml-0">
             <option selected>TYPE D ‘ETUDIANT</option>
             <option>boursiers non logés</option>
             <option>boursiers logés</option>
@@ -31,6 +31,6 @@
     </div>
    </div>
 
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>
 </div>
