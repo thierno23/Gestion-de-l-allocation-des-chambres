@@ -3,5 +3,20 @@
     position: relative;
 }
 .header{
-background: #1F679B;
+    height: 3em;
+    background: #1F679B;
+    letter-spacing: .5em
+}
+
+@media screen and (min-width : 1000px){
+    .center{
+        width: 60%;
+        align-items: center !important;
+  
+    }
+}
+
+nav a{
+    border: 1px solid #000;
+    border-radius: 10px;
 }
