@@ -1,17 +1,41 @@
-<div class="container">
- <div class="header h-25 w-100">
-     <p class="text-center">SA GESTION</p>
+<div class="container-fluid">
+ <div class="header d-flex align-items-center justify-content-center ">
+     <p class="text-center mx-auto pt-3 font-weight-bold text-light ">SA GESTION</p>
  </div>
 </div>
 
-<div class="container-fluid">
-    <div class="nav navbar">
-        <div class="narbar-link">
-            <ul>
-                <li><img src="" alt="" srcset=""><a href="#">Enregistrer Etudiant</a></li>
-                <li><img src="" alt=""><a href="#">Liste Etudiant</a> </li>
-                <li><img src="" alt=""><a href="#">Liste Chambre</a></li>
-            </ul>
+
+<div class="container center ">
+
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-light ">
+  <a class="navbar-brand text-light bg-primary px-2" href="#"><img class="mr-2" src="../publics/images/ic-ajout-active.png" alt="">Enregistrer Etudiant</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+     
+        <li class="nav-item dropdown mr-3">
+        <a class="nav-link dropdown-toggle text-dark bg-secondary px-2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img  class="mr-2" src="../publics/images/ic-liste-active.png" alt=""> Lister Etudiants
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Par Loges</a>
+          <a class="dropdown-item" href="#"></a>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
-    </div>
-</div>
+      </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark bg-secondary px-2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img class="mr-2 " src="../publics/images/ic-liste-active.png" alt="">Lister les Chambres
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Par Loges</a>
+          <a class="dropdown-item" href="#"></a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+ </div>
