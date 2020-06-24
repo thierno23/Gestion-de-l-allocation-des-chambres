@@ -13,7 +13,7 @@
      <body class="m-0 p-0 bg-secondary">
          
 
-      <?php    require_once "header.php";
+      <?php   // require_once "header.php";
       
       require_once "enregistreEtud.php";
       ?>
