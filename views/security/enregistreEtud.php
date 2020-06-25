@@ -1,4 +1,5 @@
-<div class="row  align-items-center justify-content-center">
+
+<div class="row align-items-center justify-content-center">
 <form class="col-md-6 col-sm-7 col-lg-5 col-10  bg-light py-3">
   <div class="form-row">
         <div class="form-group col-md-6">
@@ -30,6 +31,8 @@
         </select>
     </div>
    </div>
+ 
+
 
   <button type="submit" class="btn btn-primary">Enregistrer</button>
 </form>
