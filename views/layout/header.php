@@ -5,7 +5,7 @@
 </div>
 
 
-<div class="container center ">
+<div class="container ">
 
 <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,6 +15,9 @@
     <ul class="navbar-nav">
     <a class="navbar-brand text-light bg-primary px-2" href="#"><img class="mr-2" src="publics/images/ic-ajout-active.png" alt="">Enregistrer Etudiant</a>
 
+    <li>
+           <a class="navbar-brand text-light  px-2" href="#"><img class="mr-2" src="publics/images/ic-ajout-active.png" alt="">Enregistrer Batiment</a> 
+         </li>
          <li>
            <a class="navbar-brand text-light  px-2" href="#"><img class="mr-2" src="publics/images/ic-ajout-active.png" alt="">Enregistrer Chambre</a> 
          </li>
