@@ -14,15 +14,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-     
+         <li>
+           <a class="navbar-brand text-light  px-2" href="#"><img class="mr-2" src="../publics/images/ic-ajout-active.png" alt="">Enregistrer Chambre</a> 
+         </li>
         <li class="nav-item dropdown mr-3">
         <a class="nav-link dropdown-toggle text-dark bg-secondary px-2" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img  class="mr-2" src="../publics/images/ic-liste-active.png" alt=""> Lister Etudiants
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Par Loges</a>
-          <a class="dropdown-item" href="#"></a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Tous les étudiants</a>
+          <a class="dropdown-item" href="#">Recherche Par matricule</a>
+          <a class="dropdown-item" href="#">Lister par batiment</a>
+          <a class="dropdown-item" href="#">Lister par chambres</a>
         </div>
       </li>
         <li class="nav-item dropdown">
@@ -30,9 +33,10 @@
         <img class="mr-2 " src="../publics/images/ic-liste-active.png" alt="">Lister les Chambres
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Par Loges</a>
-          <a class="dropdown-item" href="#"></a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="listChambre">Tous les chambres</a>
+          <a class="dropdown-item" href="#">Lister par type</a>
+          <a class="dropdown-item" href="#">Lister par batiment</a>
+          <a class="dropdown-item" href="#">Recherche Par numero</a>
         </div>
       </li>
     </ul>

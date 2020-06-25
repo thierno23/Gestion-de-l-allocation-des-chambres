@@ -1,5 +1,5 @@
 <?php
-class JeuDao extends Manager {
+class BatimentDao extends Manager {
 
 
     public function __construct(){

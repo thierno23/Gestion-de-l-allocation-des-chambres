@@ -1,6 +1,10 @@
 *{
     box-sizing: border-box;
-    position: relative;
+    
+}
+body{
+    background: url("../images/fond1.jpg") no-repeat;
+    background-size: cover;
 }
 .header{
     height: 3em;

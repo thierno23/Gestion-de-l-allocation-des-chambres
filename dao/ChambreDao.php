@@ -1,10 +1,10 @@
 <?php
-class UserDao extends Manager {
+class ChambreDao extends Manager {
 
 
     public function __construct(){
-        $this->tableName="user";
-        $this->className="User";
+        $this->tableName="chambre";
+        $this->className="Chambre";
     }
     public function add($obj){
         $sql="";
@@ -14,13 +14,14 @@ class UserDao extends Manager {
 
     }
     
-    public function findByLoginAndPwd($login,$pwd){
-        $sql="select * from $this->tableName where login='$login'  and pwd='$pwd' ";
+    public function getDataChambre(){
+        $sql="select * from $this->tableName LIMIT 0,7 ";
         $data=$this->executeSelect($sql);
         if(count($data)==0){
               return null;
         }
-        return count($data)==1?$data[0]:$data;
+       var_dump($data ["Chambre"]);
+       // return count($data)==1?$data[0]:$data;
     
     }
    
