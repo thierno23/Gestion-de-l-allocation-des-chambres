@@ -29,7 +29,7 @@ abstract class Manager implements IDao{
 
   public function executeUpdate($sql){
           $this->getConnexion();
-           $nbreLigne= $this->pdo->exec($sql);
+           $nbreLigne= $this->pdo->query($sql);
           $this->closeConnexion();
           return $nbreLigne;
    }
@@ -48,7 +48,7 @@ abstract class Manager implements IDao{
       return $data;
 
   }
-  
+ 
   public function findAll(){
     $sql="select * from $this->tableName";
     $data=$this->executeSelect($sql);

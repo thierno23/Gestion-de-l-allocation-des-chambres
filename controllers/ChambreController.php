@@ -18,8 +18,6 @@ class ChambreController extends Controller{
           $this->data_view['tab']=ob_get_clean();
           $this->view="listerChambre";
           $this->render();
-          
-        
       }
       public function Pagination(){
           ob_start();
@@ -35,7 +33,14 @@ class ChambreController extends Controller{
              
       }
      
-
+      public function setDelete(){
+           
+           if(isset($_POST['action'])){
+          $this->dao = new ChambreDao();
+          echo   $this->dao->Delete($num_ch);
+           }
+      }
+//
 public function bloquerJoueur(){
      echo "Bloquer";
 }

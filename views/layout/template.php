@@ -83,7 +83,7 @@
     success:function(data){
       alert(data);  
       $('#customerModal').modal('hide'); 
-      loadUser(detinate="Pagination") 
+      loadUser() 
     }
     });
     }
@@ -114,20 +114,20 @@
       });
     });
     $(document).on('click', '.delete', function(){
-    var id = $(this).attr("id"); 
-
+    let num_ch = $(this).attr("id"); 
+  console.log(num_ch)
     if(confirm("Are you sure you want to remove this data?"))
     {
       
     var action = "Delete"; 
     $.ajax({
-    url:"??url=Chambre/setUpdate",   
+    url:"?url=Chambre/setDelete",   
     method:"POST",     
-    data:{id:id, action:action}, 
+    data:{num_ch:num_ch, action:action}, 
     success:function(data)
     {
       
-      console.log(data);
+    console.log(data);
       
     alert(data); 
 
