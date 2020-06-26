@@ -18,8 +18,6 @@ class ChambreController extends Controller{
           $this->data_view['tab']=ob_get_clean();
           $this->view="listerChambre";
           $this->render();
-          
-        
       }
       public function Pagination(){
           ob_start();
