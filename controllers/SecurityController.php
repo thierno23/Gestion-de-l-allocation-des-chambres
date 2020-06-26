@@ -4,11 +4,7 @@ class SecurityController extends Controller{
    public  function __construct(){
       $this->folder="security";
       $this->layout="template";
-<<<<<<< HEAD
      $this->validator=new Validator();
-=======
-     // $this->validator=new Validator();
->>>>>>> refs/remotes/origin/master
     
    }
 
