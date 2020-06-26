@@ -5,6 +5,7 @@
 body{
     background: url("../images/bg1.jpg") no-repeat;
     background-size: cover;
+    overflow-x:hidden;
 }
 .header{
     height: 3em;

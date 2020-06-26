@@ -26,12 +26,12 @@ class AddchambreController extends Controller{
                 $type_ch= 2;
             }
            
-            $sql= "INSERT INTO chambre (num_chambre,num_depart,id) 
-                        VALUES ( 1,2,3)";
-            //$tableau = array('num_ch'=>55,'num_bat'=>5,'type_ch'=>1,);
+            $sql= "INSERT INTO chambre (num_chambre=:num_ch,num_depart=:num_bat,id=:'type_ch) 
+                           VALUES ( :num_ch,:num_bat,:type_ch)";
+            $tableau = array('num_ch'=>$_POST['num_ch'],'num_bat'=>$_POST['num_bat'],'type_ch'=>$type_ch,);
             $this->dao = new ChambreDao();
-             echo $this->dao->executeUpdate($sql);
-             //$this->dao->addData($sql,$tableau);
+            // echo $this->dao->executeUpdate($sql);
+             $this->dao->addData($sql,$tableau);
              $this->data_view['t']=ob_get_clean();
              echo $this->data_view['t'];
             

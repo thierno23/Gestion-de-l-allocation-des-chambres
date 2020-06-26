@@ -24,7 +24,7 @@ class Chambre implements IGestion{
 				}
 			  }
 			}
-			// 
+			
 	public function  getNum_chambre() {
 		return $this->num_chambre;
 	}

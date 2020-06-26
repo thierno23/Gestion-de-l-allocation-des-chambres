@@ -83,7 +83,7 @@
     success:function(data){
       alert(data);  
       $('#customerModal').modal('hide'); 
-      loadUser(detinate="Pagination") 
+      loadUser() 
     }
     });
     }
@@ -127,7 +127,7 @@
     success:function(data)
     {
       
-      console.log(data);
+    console.log(data);
       
       alert(data); 
 

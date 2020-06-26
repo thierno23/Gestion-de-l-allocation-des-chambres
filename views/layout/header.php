@@ -21,6 +21,7 @@
                     <a class="navbar-brand text-light  px-2" href="#"><img class="mr-2"
                             src="publics/images/ic-ajout-active.png" alt="">Enregistrer Batiment</a>
                 </li>
+
                 <li>
                     <a class="navbar-brand text-light  px-2" href="?url=Addchambre/index">Enregistrer Chambre</a>
                 </li>
@@ -39,8 +40,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark bg-secondary px-2" href="#" id="navbarDropdownMenuLink"
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Lister les Chambres
-                    </a>
+                        <img class="mr-2 " src="publics/images/ic-liste-active.png" alt="">Lister les Chambres</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="?url=Chambre/listChambre">Tous les chambres</a>
                         <a class="dropdown-item" href="#">Lister par type</a>
@@ -49,6 +49,5 @@
                     </div>
                 </li>
             </ul>
-        </div>
     </nav>
 </div>
