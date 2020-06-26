@@ -8,12 +8,7 @@ class Controller{
     protected $dao;
     protected $validator;
 
-    public  function __construct(){
-      // $this->folder="security";
-      // $this->layout="template";
-     // $this->validator=new Validator();
-    
-   }
+   
     public function render(){
 
         $pathView="./views/".$this->folder."/".$this->view.".php";

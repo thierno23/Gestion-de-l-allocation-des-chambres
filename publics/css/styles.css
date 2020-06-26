@@ -24,3 +24,11 @@ nav a{
     border: 1px solid #000;
     border-radius: 10px;
 }
+.h-25 td{
+    height: 10px !important;
+}
+div #suiv ,.suiv input {
+
+    height: 1.5em !important;
+    line-height: .5em;
+}

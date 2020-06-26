@@ -48,7 +48,7 @@ abstract class Manager implements IDao{
       return $data;
 
   }
-
+  
   public function findAll(){
     $sql="select * from $this->tableName";
     $data=$this->executeSelect($sql);

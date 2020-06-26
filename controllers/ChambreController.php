@@ -8,21 +8,33 @@ class ChambreController extends Controller{
           $this->layout="template";
          //$this->validator=new Validator();
         
-       }
-       public function index(){
-          $this->view="listerChambre";
-          $this->render();
-    
-      }
+     }
+     
 
-      public function listChambre(){
-           
+     public function listChambre(){
+          ob_start();
           $this->dao = new ChambreDao();
-          $this->dao->getDataChambre();
-        
+          echo  $this->dao->getDataChambre();
+          $this->data_view['tab']=ob_get_clean();
           $this->view="listerChambre";
           $this->render();
+          
+        
       }
+      public function Pagination(){
+          ob_start();
+           if(isset($_POST['action'])){
+               $limit =$_POST['limit'];
+               $offset = $_POST['offset'];
+               
+               $this->dao = new ChambreDao();
+               echo $this->dao->getPagination($limit,$offset);
+               $this->data_view['tab2']=ob_get_clean();
+               echo $this->data_view['tab2'];
+           }
+             
+      }
+     
 
 public function bloquerJoueur(){
      echo "Boquer";
