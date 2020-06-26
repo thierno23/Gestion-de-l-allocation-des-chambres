@@ -114,22 +114,22 @@
       });
     });
     $(document).on('click', '.delete', function(){
-    var id = $(this).attr("id"); 
+    var num_ch = $(this).attr("id"); 
 
     if(confirm("Are you sure you want to remove this data?"))
     {
       
     var action = "Delete"; 
     $.ajax({
-    url:"??url=Chambre/setUpdate",   
+    url:"?url=Chambre/setDelete",   
     method:"POST",     
-    data:{id:id, action:action}, 
+    data:{num_ch:num_ch, action:action}, 
     success:function(data)
     {
       
       console.log(data);
       
-    alert(data); 
+      alert(data); 
 
     }
 

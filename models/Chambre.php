@@ -21,7 +21,7 @@ class Chambre implements IGestion{
 				{
 				  // On appelle le setter.
 				  $this->$method($value);
-				}else{echo "non";}
+				}
 			  }
 			}
 			// 

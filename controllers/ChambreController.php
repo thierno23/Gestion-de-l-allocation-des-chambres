@@ -32,7 +32,18 @@ class ChambreController extends Controller{
            }
              
       }
-     
+      public function setDelete(){
+           
+          if(isset($_POST['action'])){
+               $num_ch=$_POST['num_ch'];
+               $sql="UPDATE chambre SET status = 0  WHERE num_chambre =444";
+               $this->dao = new ChambreDao();
+               echo   $this->dao->executeUpdate($sql);
+               $this->data_view['data']=ob_get_clean();
+               echo   json_encode($this->data_view['data']);
+          
+          }
+     }
 
 public function bloquerJoueur(){
      echo "Bloquer";
