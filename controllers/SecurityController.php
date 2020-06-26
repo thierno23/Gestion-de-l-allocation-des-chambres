@@ -4,14 +4,18 @@ class SecurityController extends Controller{
    public  function __construct(){
       $this->folder="security";
       $this->layout="template";
+<<<<<<< HEAD
      $this->validator=new Validator();
+=======
+     // $this->validator=new Validator();
+>>>>>>> refs/remotes/origin/master
     
    }
 
    public function index(){
       $this->view="enregistreEtud";
        $this->render();
-
+ 
   }
     public function vinscription(){
          $this->data_view["title"]="Pour tester votre niveau de culture générale";

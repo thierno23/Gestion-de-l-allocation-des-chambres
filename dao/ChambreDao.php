@@ -33,9 +33,14 @@ class ChambreDao extends Manager {
                      <div class="suiv float-left"><input id="id_'.$row->getNum_chambre().'" class="btn btn-danger delete" type="button" value="delete"></div></td> ';
             } 
         }
+<<<<<<< HEAD
            return  $output;
         // return count($data)==1?$data[0]:$data;
     }
+=======
+      // var_dump($data);
+       // return count($data)==1?$data[0]:$data;
+>>>>>>> refs/remotes/origin/master
     
     public function getDataChambre(){
         $sql="select * from $this->tableName LIMIT 0,5";

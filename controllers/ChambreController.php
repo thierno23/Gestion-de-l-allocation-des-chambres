@@ -37,7 +37,7 @@ class ChambreController extends Controller{
      
 
 public function bloquerJoueur(){
-     echo "Boquer";
+     echo "Bloquer";
 }
 
 public function fixerNbreQuestion(){
