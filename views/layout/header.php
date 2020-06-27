@@ -33,7 +33,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Tous les étudiants</a>
                         <a class="dropdown-item" href="#">Recherche Par matricule</a>
-                        <a class="dropdown-item" href="#">Lister par batiment</a>
+                        <a class="dropdown-item" href="#">Lister par bâtiment</a>
                         <a class="dropdown-item" href="#">Lister par chambres</a>
                     </div>
                 </li>
