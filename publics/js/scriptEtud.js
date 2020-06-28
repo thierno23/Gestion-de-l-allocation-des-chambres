@@ -1,22 +1,10 @@
 $(document).ready(function(){
 
-    const date = $('#date').val();
-    let offset = 0;
-    const tbody = $('#tbody');
-    $.ajax({
-            type: "POST",
-            url: "http://localhost/LIVE_AJAX/data/getVentes.php",
-            data: {limit:7,offset:offset,date:date},
-            dataType: "JSON",
-            success: function (data) {
-                tbody.html('')
-                printData(data,tbody);
-                offset +=7
-            }
-        });
 
         //  Scroll
     const scrollZone = $('#scrollZone')
+    let offset= 5;
+     
     scrollZone.scroll(function(){
     //console.log(scrollZone[0].clientHeight)
     const st = scrollZone[0].scrollTop;
@@ -28,20 +16,27 @@ $(document).ready(function(){
     if(sh-st <= ch){
         $.ajax({
             type: "POST",
-            url: "http://localhost/LIVE_AJAX/data/getVentes.php",
-            data: {limit:7,offset:offset,date:date},
-            dataType: "JSON",
+            url: "?url=Etudiant/ScrollZone",
+            data: {limit:5,offset:offset},
             success: function (data) {
-                
-                printData(data,tbody);
-                offset +=7;
+                console.log(data);
+                $('#t_body').html(data);
+                offset +=5;
             }
         });
     }
        
     })
 });
-
+$("#t_body")
+    .on("click","tr",function(){
+        coul=$("body").css("background-color");
+        $(this).css("background-color","orange");
+        $("#bd_users tr").not(this).css("background-color",coul);
+})
+    .on('dblclick',"td",function(){
+        $(this).parents().css("background-color",coul);
+});
 function printData(data,tbody){
     $.each(data, function(indice,vente){
         tbody.append(`
@@ -53,4 +48,4 @@ function printData(data,tbody){
     `);
 });
 }
-</script>
+

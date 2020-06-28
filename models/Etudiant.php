@@ -2,12 +2,12 @@
 class Etudiant implements IGestion {
     //Attributs
        //Encapsulation
-        protected  $id;
+        protected  $matricule;
         protected  $prenom;
         protected  $nom;
         protected  $email;
         protected  $tel;
-        protected  $date;
+        protected  $date_naiss;
         
         public function  __construct($row=null){
             if($row!=null){
@@ -30,13 +30,20 @@ class Etudiant implements IGestion {
           }
         }
 	public function getId() {
-		return this->id;
+		return $this->id;
 	}
 
 	public function setId( $id) {
 		$this->id = $id;
 	}
 
+	public function getMatricule() {
+		return $this->matricule;
+	}
+
+	public function setMatricule( $matricule) {
+		$this->matricule = $matricule;
+	}
 	public function getPrenom() {
 		return $this->prenom;
 	}
@@ -53,7 +60,7 @@ class Etudiant implements IGestion {
 		$this->nom = $nom;
 	}
 
-	public  getEmail() {
+	public function getEmail() {
 		return $this->email;
 	}
 
@@ -68,14 +75,14 @@ class Etudiant implements IGestion {
 	public function setTel( $tel) {
 		$this->tel = $tel;
 	}
-	public function getDate() {
-		return $this->Date;
+	public function getDate_naiss() {
+		return $this->date_naiss;
 	}
 
-	public function setDate( $date) {
-		$this->date = $date;
+	public function setDate_naiss( $date_naiss) {
+		$this->date_naiss = $date_naiss;
 	}
 
 // public abstract  function hydrate($row);
      
-   
+}

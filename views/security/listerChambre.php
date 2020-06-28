@@ -41,17 +41,17 @@
                 <div class="modal-body">
                     <label>Entrer numero chambre</label>
                     <input type="text" name="num_ch" id="num_ch" class="form-control "
-                        placeholder="entrer le numero de la chambre" />
+                         />
                    
                     <label>Entrer numero batiment</label>
-                    <input type="text" name="num_bat" id="num_bat" class="form-control "
-                        placeholder="entrer le numero du batiment" />
+                    <input type="text" name="num_bat" id="num_bat"  class="form-control "
+                         />
                     <br />
                     <label>Choisir le type</label>
-                    <select id="type_ch"  name="type_ch"class="form-control text-sm ml-0">
-                        <option selected>TYPE DE CHAMBRE</option>
-                        <option>individuel</option>
-                        <option>à deux</option>
+                    <select id="type_ch"  name="type_ch" class="form-control text-sm ml-0">
+                        <option id="_1" >TYPE DE CHAMBRE</option>
+                        <option id="_2" >individuel</option>
+                        <option id="_3" >à deux</option>
                     </select>
                     <!-- <input type="text" name="type" id="type" class="form-control" placeholder="Chamger le type de la chambre"/> -->
                     <br />

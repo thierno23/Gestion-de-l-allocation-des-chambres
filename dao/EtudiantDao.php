@@ -29,9 +29,9 @@ class EtudiantDao extends Manager {
                     <td>'.$row->getNom().'</td>
                     <td>'.$row->getEmail().'</td>
                     <td>'.$row->getTel().'</td>
-                    <td>'.$row->getDate().'</td>
-                    <td><div class="suiv float-left mr-1"><input id="'.$row->getNum_chambre().'" class="btn  btn-success update" type="button" value="update"></div>
-                     <div class="suiv float-left"><input id="'.$row->getNum_chambre().'" class="btn btn-danger delete" type="button" value="delete"></div></td> ';
+                    <td>'.$row->getDate_naiss().'</td>
+                    <td><div class="suiv float-left mr-1"><input id="'.$row->getMatricule() .'" class="btn  btn-success update" type="button" value="update"></div>
+                     <div class="suiv float-left"><input id="'.$row->getMatricule() .'" class="btn btn-danger delete" type="button" value="delete"></div></td> ';
             } 
         }
            return  $output;

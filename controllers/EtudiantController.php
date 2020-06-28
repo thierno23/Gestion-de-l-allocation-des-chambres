@@ -20,17 +20,17 @@ class EtudiantController extends Controller{
         $this->view="listerEtudiant";
         $this->render();
     }
-    public function Pagination(){
+    public function ScrollZone(){
         ob_start();
-        if(isset($_POST['action'])){
+        
              $limit =$_POST['limit'];
              $offset = $_POST['offset'];
-             
-             $this->dao = new ChambreDao();
-             echo $this->dao->getDataChambre($limit,$offset);
+             $this->dao = new EtudiantDao();
+             echo $this->dao->getDataEtudiant($limit,$offset);
              $this->data_view['tab2']=ob_get_clean();
              echo $this->data_view['tab2'];
-         }
+         
+    }
 
 
 }

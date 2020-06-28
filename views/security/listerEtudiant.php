@@ -1,4 +1,14 @@
-<div class="d-flex align-items-center justify-content-center">
+<style>
+#scrollZone{
+    max-height: 30em;
+     width: 60%;
+    margin: auto;
+    overflow: scroll;
+    
+}
+
+</style>
+<div id="scrollZone" class=" align-items-center justify-content-center">
     <div class="row ">
         <div class="col">
             <table id="" class="table table-striped" >
@@ -12,7 +22,7 @@
                         <th id="">Func</th>
                     </tr>
                 </thead>
-                <tbody id="tbody">
+                <tbody id="t_body">
                     <tr class="text-center ">
                         <td>Kane</td>
                         <td>Abdou</td>
@@ -30,13 +40,13 @@
 
                 </tbody>
             </table>
-            <div class="suivant float-right"><input id="suivant" class="btn btn-success" type="button" value="suivant">
+            <!-- <div class="suivant float-right"><input id="suivant" class="btn btn-success" type="button" value="suivant"> -->
             </div>
         </div>
     </div>
 
-    <!-- This is Customer Modal. It will be use for Create new Records and Update Existing Records!-->
-    <div id="customerModal" class="modal fade">
+       <!-- This is Customer Modal. It will be use for Create new Records and Update Existing Records!-->
+       <div id="customerModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -45,17 +55,17 @@
                 <div class="modal-body">
                     <label>Entrer numero chambre</label>
                     <input type="text" name="num_ch" id="num_ch" class="form-control "
-                        placeholder="entrer le numero de la chambre" />
+                         />
                    
                     <label>Entrer numero batiment</label>
-                    <input type="text" name="num_bat" id="num_bat" class="form-control "
-                        placeholder="entrer le numero du batiment" />
+                    <input type="text" name="num_bat" id="num_bat"  class="form-control "
+                         />
                     <br />
                     <label>Choisir le type</label>
-                    <select id="type_ch"  name="type_ch"class="form-control text-sm ml-0">
-                        <option selected>TYPE DE CHAMBRE</option>
-                        <option>individuel</option>
-                        <option>à deux</option>
+                    <select id="type_ch"  name="type_ch" class="form-control text-sm ml-0">
+                        <option id="_1" >TYPE DE CHAMBRE</option>
+                        <option id="_2" >individuel</option>
+                        <option id="_3" >à deux</option>
                     </select>
                     <!-- <input type="text" name="type" id="type" class="form-control" placeholder="Chamger le type de la chambre"/> -->
                     <br />
