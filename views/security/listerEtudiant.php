@@ -4,17 +4,21 @@
             <table id="" class="table table-striped" >
                 <thead>
                     <tr class="text-sm-center h-25">
-                        <th id="">N° chambre</thi>
-                        <th id="">N° batiment</th>
-                        <th id="">Type</th>
-                        <th id="">Fonctions</th>
+                        <th id="">Prenom</thi>
+                        <th id="">Nom</th>
+                        <th id="">Email</th>
+                        <th id="">Tel</th>
+                        <th id="">Date</th>
+                        <th id="">Func</th>
                     </tr>
                 </thead>
                 <tbody id="tbody">
                     <tr class="text-center ">
-                        <td>2333</td>
-                        <td>556</td>
-                        <td>individuel</td>
+                        <td>Kane</td>
+                        <td>Abdou</td>
+                        <td>kane@gmail.com</td>
+                        <td>002125878</td>
+                        <td>88/2/5878</td>
                         <td>
                             <div class="suiv float-left mr-1"><input id="suiv" class="btn btn-success" type="button"
                                     value="update"></div>

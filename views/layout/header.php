@@ -14,7 +14,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <a class="navbar-brand text-light bg-primary px-2" href="#"><img class="mr-2"
+                <a class="navbar-brand text-light bg-primary px-2" href="?url=Security/index"><img class="mr-2"
                         src="publics/images/ic-ajout-active.png" alt="">Enregistrer Etudiant</a>
 
                 <li>
@@ -31,7 +31,7 @@
                         <!-- <img  class="mr-2" src="../publics/images/ic-liste-active.png" alt="">--> Lister Etudiants
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Tous les étudiants</a>
+                        <a class="dropdown-item" href="?url=Etudiant/listEtudiant">Tous les étudiants</a>
                         <a class="dropdown-item" href="#">Recherche Par matricule</a>
                         <a class="dropdown-item" href="#">Lister par bâtiment</a>
                         <a class="dropdown-item" href="#">Lister par chambres</a>

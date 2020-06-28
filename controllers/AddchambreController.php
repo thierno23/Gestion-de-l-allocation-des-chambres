@@ -15,9 +15,9 @@ class AddchambreController extends Controller{
   
     } 
     public function addChambre(){
+
         ob_start();
-        $this->view="enregistreChambre";
-         $this->render();
+           
         if(isset($_POST['submit'])){
            
             if($_POST['type_ch']=='individuel'){
@@ -26,15 +26,15 @@ class AddchambreController extends Controller{
                 $type_ch= 2;
             }
            
-            $sql= "INSERT INTO chambre (num_chambre=:num_ch,num_depart=:num_bat,id=:'type_ch) 
-                           VALUES ( :num_ch,:num_bat,:type_ch)";
-            $tableau = array('num_ch'=>$_POST['num_ch'],'num_bat'=>$_POST['num_bat'],'type_ch'=>$type_ch,);
+           $tableau = array('num_ch'=>150,'num_bat'=>$_POST['num_bat'],'type_ch'=>$type_ch,);
+            
             $this->dao = new ChambreDao();
             // echo $this->dao->executeUpdate($sql);
-             $this->dao->addData($sql,$tableau);
+             echo $this->dao->addData($tableau);
              $this->data_view['t']=ob_get_clean();
-             echo $this->data_view['t'];
-            
+            if( $this->data_view['t']!=0)  echo "<script>alert('enregitrer')</script>";
+            $this->view="enregistreChambre";
+            $this->render();
         }
         else echo 'ok';
     }

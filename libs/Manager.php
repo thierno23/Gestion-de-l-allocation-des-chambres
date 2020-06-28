@@ -28,15 +28,15 @@ abstract class Manager implements IDao{
   }
 
   public function executeUpdate($sql){
-          $this->getConnexion();
-           $nbreLigne= $this->pdo->query($sql);
-          $this->closeConnexion();
-          return $nbreLigne;
+      $this->getConnexion();
+      $nbreLigne= $this->pdo->query($sql);
+      $this->closeConnexion();
+      return $nbreLigne;
    }
 
   public function executeSelect($sql){
       
-    $this->getConnexion();
+      $this->getConnexion();
     //Traitement
       $result=$this->pdo->query($sql);
       $data=[];
@@ -54,21 +54,26 @@ abstract class Manager implements IDao{
     $data=$this->executeSelect($sql);
     var_dump($data);
   }
-public function findById($id){
+  public function findById($id){
     $sql="select * from $this->tableName where id=$id ";
     $data=$this->executeSelect($sql);
     return count($data)==1?$data[0]:$data;
 
-}
+  }
 
-public function delete($id){
+  public function delete($id){
     $sql="delete from $this->tableName where id=$id";
     return $this->executeUpdate($sql)!=0;
-}
+  }
 
-
-
-
+  public function executePrepare($sql,$data){
+    $this->getConnexion();
+    $requete = $this->pdo->prepare($sql);
+    $line = $requete->execute($data);
+    $this->closeConnexion();
+    var_dump($line);
+  }
+  
 
     //Connexion
     //FermerConnexion

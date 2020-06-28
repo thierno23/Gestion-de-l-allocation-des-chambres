@@ -10,9 +10,6 @@ class ChambreDao extends Manager {
     public function add($sql){}
     
     
-    public function update($obj){
-
-    }
     public function setTables($data){
         $output='';
         if(count($data)==0){
@@ -41,32 +38,50 @@ class ChambreDao extends Manager {
            return  $output;
         // return count($data)==1?$data[0]:$data;
     }
-    
-    public function getDataChambre(){
-        $sql="select * from $this->tableName LIMIT 0,5";
+
+    public function update($obj){
+        $sql="select * from $this->tableName WHERE `num_chambre` = {$obj} LIMIT 1";
+        $data = $this->executeSelect($sql);
+        $output=[];
+        // return $this->setTables($data);
+        foreach($data as $row){
+            if($row->getId()== 1){
+                $type_ch='individuel';
+            }elseif($row->getId()== 2){
+                $type_ch = "a deux";
+            }
+            $output['num_ch']=$row->getNum_chambre();
+            $output['num_bat']= $row->getNum_depart();
+            $output['type_ch']=$type_ch;
+        }
+        return $output;
+    }
+    public function getDataChambre($limit=0,$offset=5){
+        $sql="select * from $this->tableName LIMIT {$limit},{$offset}";
         $data=$this->executeSelect($sql);
          return $this->setTables($data);
     }
+    // public function getPagination($limit,$offset){
+    //     $sql="select * from $this->tableName LIMIT {$limit},{$offset} ";
+    //     $data=$this->executeSelect($sql);
+    //     return $this->setTables($data);
+    // }
 
-    public function getPagination($limit,$offset){
-        $sql="select * from $this->tableName LIMIT {$limit},{$offset} ";
-        $data=$this->executeSelect($sql);
-        return $this->setTables($data);
-    }
-
-    
     public function Delete($num_ch){
        $sql="UPDATE $this->tableName SET `status` = 0  WHERE `num_chambre` =$num_ch";
-       return  $this->executeUpdate($sql)!=0;
+       return $this->executeUpdate($sql)!=0; 
+      
     }
-
-public function addData($sql,$data){
-    $this->getConnexion();
-    
-    $requete = $this->pdo->prepare($sql);
-
-     $line = $requete->execute($data);
-    $this->closeConnexion();
-    var_dump($line);
-  }
+  
+   public function addData($data,$act=null){
+       if($act != null){
+           $sql="UPDATE $this->tableName SET num_chambre=:num_ch, num_depart=:num_bat, id=:type_ch
+                     WHERE num_chambre =$act";
+       }
+       else{
+        $sql= "INSERT INTO $this->tableName (num_chambre,num_depart,id)
+        VALUES ( :num_ch,:num_bat,:type_ch)";
+       }
+       return  $this->executePrepare($sql,$data)!=0;
+   }
 }
