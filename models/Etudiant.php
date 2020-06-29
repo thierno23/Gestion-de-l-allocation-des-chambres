@@ -8,6 +8,7 @@ class Etudiant implements IGestion {
         protected  $email;
         protected  $tel;
         protected  $date_naiss;
+        protected  $type_ed;
         
         public function  __construct($row=null){
             if($row!=null){
@@ -81,6 +82,13 @@ class Etudiant implements IGestion {
 
 	public function setDate_naiss( $date_naiss) {
 		$this->date_naiss = $date_naiss;
+	}
+	public function getType_ed() {
+		return $this->type_ed;
+	}
+
+	public function setType_ed( $type_ed) {
+		$this->type_ed = $type_ed;
 	}
 
 // public abstract  function hydrate($row);

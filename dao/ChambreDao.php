@@ -61,11 +61,15 @@ class ChambreDao extends Manager {
         $data=$this->executeSelect($sql);
          return $this->setTables($data);
     }
-    // public function getPagination($limit,$offset){
-    //     $sql="select * from $this->tableName LIMIT {$limit},{$offset} ";
-    //     $data=$this->executeSelect($sql);
-    //     return $this->setTables($data);
-    // }
+    public function getOption($sql){
+        $output='<select name="option" id="option" class="form-control text-sm ml-0">
+                 <option>selectioner le N° de la chambre</option>';
+        $data=$this->executeSelect($sql);
+        foreach($data as $row){
+           $output.=' <option>'.$row->getNum_chambre().'</option>';
+        }
+        return $output.='</select>';
+    }
 
     public function Delete($num_ch){
        $sql="UPDATE $this->tableName SET `status` = 0  WHERE `num_chambre` =$num_ch";

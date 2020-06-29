@@ -7,8 +7,17 @@ class EtudiantDao extends Manager {
         $this->className="Etudiant";
     }
 
-    public function add($obj){
-
+     public function getTable($sql){
+        $output='<select name="type_etud" id="type_etud" class="mt-0 form-control text-sm ml-0">
+        <option>TYPE D\'ETUDIANT</option>';
+        $data=$this->executeSelect($sql);
+        $i=1;
+        foreach($data as $row){
+            $id='op_'.$i++;
+            $output.=' <option value="'.$id.'">'.$row->getType_ed().'</option>';
+        }
+        return $output.='</select>';
+                
     }
     public function update($obj){
 
@@ -37,13 +46,16 @@ class EtudiantDao extends Manager {
            return  $output;
         // return count($data)==1?$data[0]:$data;
     }
-
+  
     public function getDataEtudiant($limit=0,$offset=5){
         $sql="select * from $this->tableName LIMIT {$limit},{$offset}";
         $data=$this->executeSelect($sql);
          return $this->setTables($data);
     }
 
-
-
+    public function add($object){
+        $req = "insert into etudiant (matricule, nom, prenom, email, tel, date_naiss,  id_t_etud) VALUES ('" .$object. "')";
+        return $this->executeUpdate($req)!=0;
+     
+    }
 }

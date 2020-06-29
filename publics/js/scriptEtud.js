@@ -25,9 +25,32 @@ $(document).ready(function(){
             }
         });
     }
-       
     })
-});
+    var choix = "";
+
+     var champ = $("#champ")
+    $( "#type_etud" ).change(function () {
+    $( "select option:selected" ).each(function() {
+    choix = $( this ).val();
+    })
+    champ.html('')
+    if(choix == "op_1")  { champ.append("<span>vous n'avez pas de logement</span>"); }
+    if(choix == "op_3")    {champ.append('<input type=text id="address" name="address" placeholder="Entrer l\'address" class="form-control col-12"> ');} 
+    if(choix == "op_2"){
+        $.ajax({
+            type: "POST",
+            url: "?url=Security/Option",
+            data: {date:1},
+            success: function (data) {
+                champ.html(data);
+               
+            }
+        });
+    }
+})
+
+})
+
 $("#t_body")
     .on("click","tr",function(){
         coul=$("body").css("background-color");
@@ -48,4 +71,3 @@ function printData(data,tbody){
     `);
 });
 }
-

@@ -7,7 +7,7 @@ class Chambre implements IGestion{
                 if($row!=null){
                     $this->hydrate($row);
                 }
-            }
+        }
 			
 			public function hydrate( $donnees)
 			{

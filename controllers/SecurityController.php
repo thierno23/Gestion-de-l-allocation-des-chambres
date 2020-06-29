@@ -9,10 +9,19 @@ class SecurityController extends Controller{
    }
 
    public function index(){
+      $sql= "select type_ed from type_etudiant";
+      $this->dao = new EtudiantDao();
+      $sql="select * from type_etudiant";
+      $this->data_view["choix"] = $this->dao->getTable($sql);
       $this->view="enregistreEtud";
-       $this->render();
- 
+      $this->render();
+      
   }
+   public function Option(){
+      $sql="select num_chambre from chambre";
+      $this->dao = new ChambreDao();
+       echo $this->dao->getOption($sql);
+   }
     public function vinscription(){
          $this->data_view["title"]="Pour tester votre niveau de culture générale";
          $this->view="inscription";
