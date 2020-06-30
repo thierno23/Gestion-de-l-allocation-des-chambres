@@ -1,7 +1,7 @@
 <style>
 #scrollZone{
-    max-height: 30em;
-     width: 60%;
+    max-height: 20em;
+     width: 70%;
     margin: auto;
     overflow: scroll;
     
@@ -14,7 +14,8 @@
             <table id="" class="table table-striped" >
                 <thead>
                     <tr class="text-sm-center h-25">
-                        <th id="">Prenom</thi>
+                        <th id="">Matricule</th>
+                        <th id="">Prenom</th>
                         <th id="">Nom</th>
                         <th id="">Email</th>
                         <th id="">Tel</th>
@@ -24,6 +25,7 @@
                 </thead>
                 <tbody id="t_body">
                     <tr class="text-center ">
+                       <td>2333KAOU5468</td>
                         <td>Kane</td>
                         <td>Abdou</td>
                         <td>kane@gmail.com</td>

@@ -34,6 +34,7 @@ class EtudiantDao extends Manager {
             foreach($data as $row){
                 $output.='
                     <tr class="text-center h-25"> 
+                    <td>'.$row->getMatricule().'</td>
                     <td>'.$row->getPrenom().'</td>
                     <td>'.$row->getNom().'</td>
                     <td>'.$row->getEmail().'</td>
