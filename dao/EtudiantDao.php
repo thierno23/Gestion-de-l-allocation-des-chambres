@@ -9,7 +9,7 @@ class EtudiantDao extends Manager {
 
      public function getTable($sql){
         $output='<select name="type_etud" id="type_etud" class="mt-0 form-control text-sm ml-0">
-        <option>TYPE D\'ETUDIANT</option>';
+        <option value="default">TYPE D\'ETUDIANT</option>';
         $data=$this->executeSelect($sql);
         $i=1;
         foreach($data as $row){
@@ -56,6 +56,21 @@ class EtudiantDao extends Manager {
     public function add($object){
         $req = "insert into etudiant (matricule, nom, prenom, email, tel, date_naiss,  id_t_etud) VALUES ('" .$object. "')";
         return $this->executeUpdate($req)!=0;
+     
+    }
+    public function Matricule($n,$p){
+        $codeMat=date("Y");
+        do{
+        //$codeRandom = mt_Rand(1000, 9999);
+        $codeRandom  = strval(mt_Rand(1000, 9999));
+        $sql="SELECT matricule from $this->tableName  where matricule like '%$codeRandom'";
+        $data=$this->executeSelect($sql);
+        $n= strtoupper($n[0].$n[1]);
+        $p=strtoupper($p[strlen($p)-2].$p[strlen($p)-1]);
+        $codeMat.=$n.$p.$codeRandom;
+        }while($data!=null);
+         
+        return $codeMat;
      
     }
 }

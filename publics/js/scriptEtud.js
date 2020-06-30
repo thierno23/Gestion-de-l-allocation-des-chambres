@@ -28,7 +28,7 @@ $(document).ready(function(){
     })
     var choix = "";
 
-     var champ = $("#champ")
+     var champ = $("#champ") 
     $( "#type_etud" ).change(function () {
     $( "select option:selected" ).each(function() {
     choix = $( this ).val();

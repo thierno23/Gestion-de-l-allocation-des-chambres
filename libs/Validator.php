@@ -27,6 +27,12 @@ class Validator{
         }
         return false;
     }
+    public function validate_email($e){}
+
+    function validate_mobile($mobile)
+    {
+        return preg_match('/^[0-9]{10}+$/', $mobile);
+    }
 }
 /*
 private $errors=[];

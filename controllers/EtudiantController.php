@@ -34,31 +34,34 @@ class EtudiantController extends Controller{
 
 
     public function validData(){
+        
          var_dump($_POST);
+
         extract($_POST);
-        if (Validator::existe($submit)) {
-            $matricule='5644-98';
-            Validator::isEmpty($matricule, "matricule");
+        
+        if($type_etud== 'op_3'){$type_etud=3;}
+        if($type_etud== 'op_2'){$type_etud= 2;}
+        if (Validator::existe($submit) && $type_etud!= 'default') {
             Validator::isEmpty($nom, "nom");
             Validator::isEmpty($prenom, "prenom");
             Validator::isEmpty($email, "email");
             Validator::isEmpty($tel, "tel");
             Validator::isEmpty($date_naiss, "date_naiss");
-            Validator::isEmpty($type_etud, "type_etud");
-          
+            // Validator::isEmpty($type_etud, "type_etud");
+            
             if (!Validator::getErrors()) {
-                $type= 2;
                 $this->dao=new EtudiantDao();
-                $object=$matricule. "' ,'" .$nom. "','" .$prenom. "' ,'" .$email. "' ,'" .$tel. "' ,'" .$date_naiss. "' ,'" .$type;
-               // $req = "insert into etudiant (prenom, nom, matricule, email, telephone, date,  typeEtu) VALUES ('" .$object. "')";
-      
-                echo $this->dao->add($object);
+                $matricule=$this->dao->Matricule($nom,$prenom);
+                $object=$matricule. "' ,'" .$nom. "','" .$prenom. "' ,'" .$email. "' ,'" .$tel. "' ,'" .$date_naiss. "' ,'" .$type_etud;
+              
+               echo  $this->dao->add($object);
                
             }/*else{
              $this->data_view['errors']=$this->validator->getErrors();
              $this->inscriptionchambre();
 
            }*/
+           
 
         }
     }

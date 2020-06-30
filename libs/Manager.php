@@ -40,11 +40,13 @@ abstract class Manager implements IDao{
     //Traitement
       $result=$this->pdo->query($sql);
       $data=[];
+      
       foreach( $result as $rowBD){
         //ORM=> tuple BD transformer en Objet
         $data[]=new $this->className($rowBD);//new User($rowBD)     
       }
       $this->closeConnexion();
+    
       return $data;
 
   }
@@ -71,7 +73,7 @@ abstract class Manager implements IDao{
     $requete = $this->pdo->prepare($sql);
     $line = $requete->execute($data);
     $this->closeConnexion();
-    var_dump($line);
+    return $line;
   }
   
 

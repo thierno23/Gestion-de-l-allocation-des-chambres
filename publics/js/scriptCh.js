@@ -31,6 +31,7 @@ $(document).ready(function(){
      loadUser(limit,offset);
      limit+=5
  });
+ //mise a jour
 $('#action').click(function(){
     var num_ch = $('#num_ch').val(); 
     var num_bat = $('#num_bat').val(); 

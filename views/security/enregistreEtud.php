@@ -21,7 +21,6 @@
             <input type="date" class="form-control" name="date_naiss" id="date_naiss" placeholder="Date de Naissance">
         </div>
   </div>
-  
   <div class="form-row">
     <div class="form-group col-md-6 ">
      <?php  echo $this->data_view["choix"];?>
